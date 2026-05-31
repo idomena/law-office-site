@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>מנע ושות׳ משרד עו״ד</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- לודר -->
+<div id="page-loader">
+  <div class="loader-logo">
+    <img src="./images/logo.png" alt="מנע ושות׳">
+  </div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<div id="scroll-progress"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<header class="site-header">
+  <div class="header-ribbon">
+    <p>ייעוץ משפטי ראשוני ללא עלות &nbsp;|&nbsp; <a href="#contact">השאירו פרטים עכשיו</a> &nbsp;|&nbsp; 03-6137946</p>
+  </div>
+  <div class="header-main">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="site-logo">
+          <img src="./images/logo.png" alt="מנע ושות׳ משרד עו״ד">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#services">תחומי עיסוק</a></li>
+            <li><a href="#about">אודות</a></li>
+            <li><a href="#team">הצוות</a></li>
+            <li><a href="#why">למה אנחנו</a></li>
+            <li><a href="#contact">צרו קשר</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="#contact" class="btn btn-gold">ייעוץ חינם</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="תפריט">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- תפריט מובייל -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#services" onclick="closeMobileNav()">תחומי עיסוק</a>
+  <a href="#about"    onclick="closeMobileNav()">אודות</a>
+  <a href="#team"     onclick="closeMobileNav()">הצוות</a>
+  <a href="#why"      onclick="closeMobileNav()">למה אנחנו</a>
+  <a href="#contact"  onclick="closeMobileNav()">צרו קשר</a>
+  <a href="#contact" class="btn btn-gold mobile-cta" onclick="closeMobileNav()">ייעוץ חינם</a>
+</div>
+
+<!-- גיבור -->
+<section class="hero">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="container" style="width:100%">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">מנע ושות׳ משרד עו״ד — מאז 1993</div>
+        <h1>מומחיות משפטית<br><em>שמשיגה תוצאות</em></h1>
+        <p class="hero-desc">מעל 30 שנות ניסיון בתחומי נזיקין, דיני עבודה, משפט מנהלי ותובענות ייצוגיות. אנו נלחמים למענכם — עם ידע, מסירות ותוצאות מוכחות.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold">לפגישת ייעוץ חינם</a>
+          <a href="#services" class="btn btn-ghost">תחומי ההתמחות</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num" data-target="30" data-suffix="+">30+</div>
+            <div class="stat-label">שנות ניסיון</div>
+          </div>
+          <div>
+            <div class="stat-num" data-target="5000" data-suffix="+">5K+</div>
+            <div class="stat-label">לקוחות מיוצגים</div>
+          </div>
+          <div>
+            <div class="stat-num" data-target="95" data-suffix="%">95%</div>
+            <div class="stat-label">אחוז הצלחה</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <div class="hero-img-box">
+            <p style="color:rgba(255,255,255,0.2);font-size:13px">תמונת צוות / משרד</p>
+          </div>
+          <div class="hero-badge">
+            <strong>2018</strong>
+            <span>משרד מוביל</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- רצועת הישגים -->
+<div class="awards-strip">
+  <div class="container">
+    <div class="awards-inner">
+      <div class="award-item">
+        <div class="award-year">2018</div>
+        <div class="award-text">משרד מוביל</div>
+      </div>
+      <div class="awards-sep"></div>
+      <div class="award-item">
+        <div class="award-year">2021</div>
+        <div class="award-text">מצוינות בנזיקין</div>
+      </div>
+      <div class="awards-sep"></div>
+      <div class="award-item">
+        <div class="award-year">2023</div>
+        <div class="award-text">100 משרדים מובילים</div>
+      </div>
+      <div class="awards-sep"></div>
+      <div class="award-item">
+        <div class="award-year">30+</div>
+        <div class="award-text">שנות פעילות</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- חלון שירותים -->
+<div class="svc-modal-overlay" id="svcOverlay">
+  <div class="svc-modal" id="svcModal">
+    <button class="svc-modal-close" id="svcClose">✕</button>
+    <div class="svc-modal-icon"><img src="./images/scales.png" alt="" style="width:52px;height:52px;object-fit:contain;"></div>
+    <h2 class="svc-modal-title" id="svcModalTitle"></h2>
+    <p class="svc-modal-desc" id="svcModalDesc"></p>
+    <ul class="svc-modal-list" id="svcModalList"></ul>
+    <a href="#contact" class="btn btn-gold svc-modal-cta" onclick="closeModal()">לפגישת ייעוץ חינם →</a>
+  </div>
+</div>
+
+<!-- מרקיז: פסקי דין ועיתונות -->
+<section class="marquee-section">
+  <div class="marquee-header">
+    <span class="sec-label">רקורד ועיתונות</span>
+    <h2 class="sec-title" style="font-size:32px">ניצחונות בבית המשפט. כיסוי בתקשורת.</h2>
+  </div>
+  <div class="marquee-track-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">פיצוי ₪2.4 מיליון — נפגע תאונת דרכים</div>
+        <div class="mc-desc">פיצוי מלא הושג ללקוח שנותר עם נכות קבועה לאחר תאונה רב-רכבית.</div>
+        <div class="mc-footer"><span class="mc-source">בית המשפט המחוזי, תל אביב</span><span class="mc-date">2023</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">תובענה ייצוגית נגד בנק מוביל</div>
+        <div class="mc-desc">כלכליסט סיקר — המשרד הוביל תובענה על ₪18 מיליון בשם 4,000 לקוחות.</div>
+        <div class="mc-footer"><span class="mc-source">כלכליסט</span><span class="mc-date">2022</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type award">★ הכרה</span>
+        <div class="mc-title">משרד מוביל — דן אנד ברדסטריט 2023</div>
+        <div class="mc-desc">מנע ושות׳ דורג בין 100 המשרדים המובילים בישראל לשנה החמישית ברציפות.</div>
+        <div class="mc-footer"><span class="mc-source">דן אנד ברדסטריט ישראל</span><span class="mc-date">2023</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">פיטורים שלא כדין — פיצוי ₪380,000</div>
+        <div class="mc-desc">עובד פוטר ללא עילה לאחר 14 שנות ותק. פיצוי מלא ודמי פיצויים הושגו.</div>
+        <div class="mc-footer"><span class="mc-source">בית הדין לעבודה, חיפה</span><span class="mc-date">2023</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">"עורך הדין שמנצח את ענקיות הביטוח"</div>
+        <div class="mc-desc">פרופיל מעמיק על רקורדו של עו"ד מנע מול חברות הביטוח הגדולות בישראל.</div>
+        <div class="mc-footer"><span class="mc-source">TheMarker</span><span class="mc-date">2021</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">נזק סביבתי — תושבי אזור תעשייה</div>
+        <div class="mc-desc">תביעה קבוצתית של 120 משפחות. בית המשפט חייב מפעל ב-₪6.2 מיליון.</div>
+        <div class="mc-footer"><span class="mc-source">בית המשפט העליון</span><span class="mc-date">2022</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">ניצחון הגירה בערוץ 12</div>
+        <div class="mc-desc">משפחה שעמדה בפני גירוש לאחר 11 שנים בישראל קיבלה מעמד קבע בעקבות ערעורנו.</div>
+        <div class="mc-footer"><span class="mc-source">חדשות 12</span><span class="mc-date">2023</span></div>
+      </div>
+
+      <div class="marquee-card">
+        <span class="mc-type award">★ הכרה</span>
+        <div class="mc-title">מצוינות בנזיקין — לשכת עורכי הדין</div>
+        <div class="mc-desc">פרס מצוינות מלשכת עורכי הדין בישראל על הישגים יוצאי דופן בתחום הנזיקין.</div>
+        <div class="mc-footer"><span class="mc-source">לשכת עורכי הדין</span><span class="mc-date">2022</span></div>
+      </div>
+
+      <!-- כפל ללולאה חלקה -->
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">פיצוי ₪2.4 מיליון — נפגע תאונת דרכים</div>
+        <div class="mc-desc">פיצוי מלא הושג ללקוח שנותר עם נכות קבועה לאחר תאונה רב-רכבית.</div>
+        <div class="mc-footer"><span class="mc-source">בית המשפט המחוזי, תל אביב</span><span class="mc-date">2023</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">תובענה ייצוגית נגד בנק מוביל</div>
+        <div class="mc-desc">כלכליסט סיקר — המשרד הוביל תובענה על ₪18 מיליון בשם 4,000 לקוחות.</div>
+        <div class="mc-footer"><span class="mc-source">כלכליסט</span><span class="mc-date">2022</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type award">★ הכרה</span>
+        <div class="mc-title">משרד מוביל — דן אנד ברדסטריט 2023</div>
+        <div class="mc-desc">מנע ושות׳ דורג בין 100 המשרדים המובילים בישראל לשנה החמישית ברציפות.</div>
+        <div class="mc-footer"><span class="mc-source">דן אנד ברדסטריט ישראל</span><span class="mc-date">2023</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">פיטורים שלא כדין — פיצוי ₪380,000</div>
+        <div class="mc-desc">עובד פוטר ללא עילה לאחר 14 שנות ותק. פיצוי מלא ודמי פיצויים הושגו.</div>
+        <div class="mc-footer"><span class="mc-source">בית הדין לעבודה, חיפה</span><span class="mc-date">2023</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">"עורך הדין שמנצח את ענקיות הביטוח"</div>
+        <div class="mc-desc">פרופיל מעמיק על רקורדו של עו"ד מנע מול חברות הביטוח הגדולות בישראל.</div>
+        <div class="mc-footer"><span class="mc-source">TheMarker</span><span class="mc-date">2021</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type verdict">⚖ פסיקה</span>
+        <div class="mc-title">נזק סביבתי — תושבי אזור תעשייה</div>
+        <div class="mc-desc">תביעה קבוצתית של 120 משפחות. בית המשפט חייב מפעל ב-₪6.2 מיליון.</div>
+        <div class="mc-footer"><span class="mc-source">בית המשפט העליון</span><span class="mc-date">2022</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type media">📰 עיתונות</span>
+        <div class="mc-title">ניצחון הגירה בערוץ 12</div>
+        <div class="mc-desc">משפחה שעמדה בפני גירוש לאחר 11 שנים בישראל קיבלה מעמד קבע בעקבות ערעורנו.</div>
+        <div class="mc-footer"><span class="mc-source">חדשות 12</span><span class="mc-date">2023</span></div>
+      </div>
+      <div class="marquee-card">
+        <span class="mc-type award">★ הכרה</span>
+        <div class="mc-title">מצוינות בנזיקין — לשכת עורכי הדין</div>
+        <div class="mc-desc">פרס מצוינות מלשכת עורכי הדין בישראל על הישגים יוצאי דופן בתחום הנזיקין.</div>
+        <div class="mc-footer"><span class="mc-source">לשכת עורכי הדין</span><span class="mc-date">2022</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- שירותים -->
+<section id="services">
+  <div class="container">
+    <div class="sec-header" style="text-align:center">
+      <div class="gold-rule"><img src="./images/scales.png" style="width:28px;height:28px;object-fit:contain;"></div>
+      <h2 class="sec-title" style="font-size:34px">ייצוג מקצועי בכל תחום</h2>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px">
+    <div class="services-grid stagger">
+
+      <div class="svc-card" data-num="01" onclick="openModal('תביעות נזיקין','אנו מייצגים נפגעי תאונות דרכים, תאונות עבודה ורשלנות רפואית מול חברות ביטוח ומעסיקים. המשרד טיפל באלפי תיקים — מפציעות קלות ועד תביעות נכות קשה — ופועל על בסיס שכר טרחה בהצלחה בלבד.',['תאונות דרכים ורכב','פגיעות עבודה ומחלות מקצוע','רשלנות רפואית','תאונות בגוף ציבורי','סכסוכי תביעות ביטוח'])">
+        <div class="svc-number">01</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>תביעות נזיקין</h3>
+        <p>תאונות דרכים, פגיעות עבודה, רשלנות רפואית. שכר טרחה בהצלחה בלבד.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="02" onclick="openModal('דיני עבודה','כל עובד ראוי ליחס הוגן. אנו נלחמים עבור עובדים שפוטרו שלא כדין, קופחו בשכרם, הוטרדו או הופלו. עם ניסיון ישיר במוסדות ממשלתיים, אנו יודעים בדיוק כיצד לבנות את התיק החזק ביותר עבורכם.',['פיטורים שלא כדין','שכר לא משולם ופיצויים','הטרדה ואפליה בעבודה','סכסוכי חוזה ותחרות','תביעות פנסיה וגמלאות'])">
+        <div class="svc-number">02</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>דיני עבודה</h3>
+        <p>פיטורים שלא כדין, קיפוח שכר, הטרדה — הגנה מלאה על זכויות העובד.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="03" onclick="openModal('תובענות ייצוגיות','אנו מתמחים בארגון והובלת תובענות ייצוגיות בשם קבוצות צרכנים, עובדים ואזרחים שנפגעו מאותו גורם. המשרד הוביל בהצלחה תובענות נגד בנקים גדולים, חברות ביטוח ותאגידים לאומיים.',['תובענות ייצוגיות צרכניות','תביעות קבוצתיות של עובדים','חיובי יתר בבנקים וביטוח','מוצרים ושירותים פגומים','חיובי יתר בתשתיות ותקשורת'])">
+        <div class="svc-number">03</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>תובענות ייצוגיות</h3>
+        <p>תביעות קבוצתיות נגד תאגידים, בנקים וחברות ביטוח.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="04" onclick="openModal('איכות הסביבה','יחידים וקהילות שנפגעו מזיהום, רעש, פסולת רעילה או נזק תעשייתי זכאים לפיצוי. אנו מייצגים תושבים, שכונות ועסקים מול מפעלים, רשויות ויזמים שפוגעים בסביבתם ובבריאותם.',['תביעות זיהום אוויר ומים','נזקי רעש ורטט תעשייתי','פגיעות בריאות מחומרים רעילים','ירידת ערך נכסים מזיהום','תביעות קבוצתיות של תושבים'])">
+        <div class="svc-number">04</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>איכות הסביבה</h3>
+        <p>זיהום, רעש, נזקים רעילים — פיצוי לתושבים ולקהילות.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="05" onclick="openModal('משפט מנהלי','כאשר גופים ממשלתיים או רשויות ציבוריות פועלים שלא כדין — אנו מגישים עתירה לבית המשפט. הניסיון הממשלתי הבכיר של עו&quot;ד דוד מנע מעניק ללקוחותינו יתרון אסטרטגי ייחודי מול הרשויות.',['עתירות לבתי משפט מנהליים','ערעורים על החלטות רישוי','סכסוכי ביטוח לאומי','אתגורי רשויות מקומיות','ערעורים על היתרים ורגולציה'])">
+        <div class="svc-number">05</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>משפט מנהלי</h3>
+        <p>עתירות וערעורים נגד גופים ממשלתיים ורשויות ציבוריות.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="06" onclick="openModal('משפט אזרחי','מחוזים שהופרו ועד סכסוכי נכסים וגבייה, צוות התביעות האזרחיות שלנו מטפל בסכסוכים בכל ערכאה. אנו בוחנים כל תיק בקפידה ומציגים בפניכם תמונה ריאלית לפני כל פעולה.',['הפרות חוזה ואכיפה','סכסוכי מקרקעין ושכנים','גביית חובות וצווי אכיפה','הונאה והתעשרות שלא כדין','סכסוכי עיזבון וירושה'])">
+        <div class="svc-number">06</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>משפט אזרחי</h3>
+        <p>חוזים, נכסים, חובות, הונאה — ייצוג מנוסה בכל ערכאה.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="07" onclick="openModal('דיני הגירה','הליכי ההגירה בישראל מורכבים. אנו מלווים יחידים ומשפחות בכל שלב — מבקשות ויזה ועד מעמד קבע ואזרחות — עם ייצוג מלא מול משרד הפנים ובית הדין לעררים.',['בקשות ויזת עבודה ולימודים','מעמד קבע ומעמד א/5','אזרחות ואפס הכרה','ערעורים על צווי גירוש','איחוד משפחות ומעמד בן/בת זוג'])">
+        <div class="svc-number">07</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>דיני הגירה</h3>
+        <p>ויזות, מעמד קבע, אזרחות — ייצוג מלא מול משרד הפנים.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+      <div class="svc-card" data-num="08" onclick="openModal('התאמת מעמד','אנו מסייעים ליחידים ולמשפחות להסדיר את מעמדם החוקי בישראל. בין אם מדובר בשינוי סוג ויזה, שדרוג למעמד קבע או הסדרת מעמד בלתי סדיר — המשרד מעניק הכוונה מקצועית וייצוג מלא.',['שינוי קטגוריית ויזה','הסדרת מעמד בלתי סדיר','שדרוג ממעמד זמני לקבוע','בקשות מעמד הומניטרי מיוחד','ייצוג מול רשות האוכלוסין'])">
+        <div class="svc-number">08</div>
+        <div class="svc-icon"><img src="./images/scales.png" alt=""></div>
+        <h3>התאמת מעמד</h3>
+        <p>הסדרת קטגוריות ויזה, שדרוג מעמד מגורים, טיפול במצבים בלתי סדירים.</p>
+        <div class="svc-arrow">להמשך קריאה</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- אודות -->
+<section id="about">
+  <div class="container">
+    <div class="about-wrap reveal">
+      <div class="about-img-wrap">
+        <div class="about-img">תמונת המשרד / הצוות</div>
+      </div>
+      <div class="about-text">
+        <span class="sec-label">אודות המשרד</span>
+        <h2 class="sec-title">מנע ושות׳<br>מאז 1993</h2>
+        <p>המשרד הוקם על ידי עו"ד דוד מנע, לשעבר מנהל שירות התעסוקה וסגן מנכ"ל המוסד לביטוח לאומי — ניסיון ממשלתי עמוק המעניק יתרון אמיתי מול הרשויות.</p>
+        <p>לצדו פועלת עו"ד חיה מנע, חברת מועצת עיר ובעלת ניסיון ענף בדיני משפחה, מינהל ותביעות נגד רשויות. ביחד — הם מנהלים כל תיק באופן אישי ומסור.</p>
+        <ul class="about-list">
+          <li>כל תיק מנוהל אישית על ידי עו"ד מנע</li>
+          <li>שכר טרחה בהצלחה בלבד — בתביעות נזיקין</li>
+          <li>ניסיון מוכח מול כל חברות הביטוח הגדולות</li>
+          <li>זמינות מלאה לאורך כל ההליך המשפטי</li>
+          <li>שירות בעברית וברוסית</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">צרו קשר עוד היום</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- הצוות -->
+<section id="team">
+  <div class="container">
+    <div class="sec-header">
+      <div class="gold-rule"><span>הצוות</span></div>
+      <span class="sec-label">עורכי הדין שלנו</span>
+      <h2 class="sec-title">הצוות המשפטי</h2>
+    </div>
+    <div class="team-grid stagger">
+      <div class="team-card">
+        <div class="team-photo-wrap">תמונת עו"ד דוד מנע</div>
+        <div class="team-body">
+          <div class="team-name">עו"ד דוד מנע</div>
+          <div class="team-role">מייסד ושותף בכיר</div>
+          <p class="team-bio">לשעבר מנהל שירות התעסוקה וסגן מנכ"ל הביטוח הלאומי. מומחה מוביל בדיני נזיקין ועבודה עם למעלה מ-30 שנות ניסיון.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo-wrap">תמונת עו"ד חיה מנע</div>
+        <div class="team-body">
+          <div class="team-name">עו"ד חיה מנע</div>
+          <div class="team-role">שותפה בכירה</div>
+          <p class="team-bio">חברת מועצת עיר פעילה. מומחית בדיני משפחה, משפט מינהלי ותביעות נגד רשויות. מייצגת לקוחות בעברית וברוסית.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- למה אנחנו -->
+<section id="why">
+  <div class="container">
+    <div class="sec-header why-header">
+      <div class="gold-rule"><span>למה לבחור בנו</span></div>
+      <span class="sec-label" style="color:var(--gold)">היתרון שלנו</span>
+      <h2 class="sec-title" style="color:var(--white)">מדוע לקוחות בוחרים במשרד מנע</h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,0.45)">אנחנו לא רק עורכי דין — אנחנו השותפים שלכם לאורך כל הדרך.</p>
+    </div>
+  </div>
+  <div class="why-grid stagger">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-icon-wrap">🏆</div>
+      <h3>משרד מוביל ומוכר</h3>
+      <p>זוכה בתואר המשרד המוביל בתחום הנזיקין מאז 2018, עם ציון מצוינות מהלשכה.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-icon-wrap">🤝</div>
+      <h3>שכר טרחה בהצלחה</h3>
+      <p>בתביעות נזיקין — אתם לא משלמים אגורה אם לא ניצחנו. הסיכון שלנו, לא שלכם.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-icon-wrap">⚡</div>
+      <h3>נגישות ישירה</h3>
+      <p>עו"ד מנע עונה אישית. אין מזכירות, אין העברות — ישירות לאיש המקצוע.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-icon-wrap">🎯</div>
+      <h3>רקורד מוכח</h3>
+      <p>אחוז הצלחה גבוה מאוד לאורך 30 שנה, עם פסיקות תקדימיות בתחומים מרכזיים.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">05</div>
+      <div class="why-icon-wrap">🌍</div>
+      <h3>עברית ורוסית</h3>
+      <p>שירות מלא בשתי שפות — ללא מחסומי שפה, ללא תרגומים, ישירות ובבירור.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">06</div>
+      <div class="why-icon-wrap">💼</div>
+      <h3>ניסיון ממשלתי</h3>
+      <p>רקע בכיר בביטוח לאומי ובשירות התעסוקה — יתרון ייחודי מול הרשויות.</p>
+    </div>
+  </div>
+</section>
+
+<!-- צרו קשר -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-header">
+      <div class="gold-rule"><span>צרו קשר</span></div>
+      <span class="sec-label">נשמח לעזור</span>
+      <h2 class="sec-title">ייעוץ ראשוני ללא התחייבות</h2>
+      <p class="sec-sub">השאירו פרטים ונחזור אליכם תוך שעות ספורות.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <ul class="contact-list">
+          <li>
+            <div class="c-icon">📍</div>
+            <div class="c-detail">
+              <strong>כתובת</strong>
+              <span>רחוב דיזנגוף 33, תל אביב</span>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">📞</div>
+            <div class="c-detail">
+              <strong>טלפון</strong>
+              <a href="tel:036137946">03-6137946</a>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">📠</div>
+            <div class="c-detail">
+              <strong>פקס</strong>
+              <span>03-6137947</span>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">✉️</div>
+            <div class="c-detail">
+              <strong>אימייל</strong>
+              <a href="mailto:mena-law@zahav.net.il">mena-law@zahav.net.il</a>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">🕐</div>
+            <div class="c-detail">
+              <strong>שעות פעילות</strong>
+              <span>ראשון–חמישי, 09:00–18:00</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-form-wrap">
+        <h3>שלח/י פנייה</h3>
+        <p>נחזור אליכם תוך יום עסקים</p>
+
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h4>!הפנייה נשלחה</h4>
+          <p>נחזור אליכם תוך יום עסקים.</p>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="fg">
+              <label>שם פרטי</label>
+              <input type="text" name="fname" placeholder="ישראל" required>
+              <span class="field-error">נא להזין שם פרטי</span>
+            </div>
+            <div class="fg">
+              <label>שם משפחה</label>
+              <input type="text" name="lname" placeholder="ישראלי" required>
+              <span class="field-error">נא להזין שם משפחה</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label>טלפון</label>
+              <input type="tel" name="phone" placeholder="050-000-0000" required>
+              <span class="field-error">נא להזין מספר טלפון</span>
+            </div>
+            <div class="fg">
+              <label>אימייל</label>
+              <input type="email" name="email" placeholder="you@email.com">
+              <span class="field-error">נא להזין כתובת אימייל תקינה</span>
+            </div>
+          </div>
+          <div class="fg">
+            <label>נושא הפנייה</label>
+            <select>
+              <option value="">בחר/י תחום...</option>
+              <option>תביעת נזיקין</option>
+              <option>דיני עבודה</option>
+              <option>תובענה ייצוגית</option>
+              <option>משפט מנהלי</option>
+              <option>דיני הגירה</option>
+              <option>אחר</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>פרטים נוספים</label>
+            <textarea placeholder="תאר/י בקצרה את הנושא..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:15px;padding:16px">שלח פנייה</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- כפתורים צפים -->
+<div class="float-bar">
+  <a href="https://wa.me/9720361379460" class="float-btn float-btn-whatsapp" data-tip="וואטסאפ" target="_blank">💬</a>
+  <a href="tel:036137946"               class="float-btn float-btn-phone"     data-tip="התקשרו">📞</a>
+  <button                               class="float-btn float-btn-top"       data-tip="חזרה למעלה" id="scrollTop">↑</button>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-top-inner">
+        <div class="footer-brand">
+          <img src="./images/logo.png" alt="מנע ושות׳">
+          <p>משרד עורכי דין מנע ושות׳ — מספק ייצוג משפטי מנוסה, אישי ומסור מאז 1993. אנו עובדים עם מסירות מלאה להשגת התוצאה הטובה ביותר עבור לקוחותינו.</p>
+        </div>
+        <div class="footer-col">
+          <h4>תחומי עיסוק</h4>
+          <ul>
+            <li><a href="#services">תביעות נזיקין</a></li>
+            <li><a href="#services">דיני עבודה</a></li>
+            <li><a href="#services">תובענות ייצוגיות</a></li>
+            <li><a href="#services">איכות הסביבה</a></li>
+            <li><a href="#services">משפט מנהלי</a></li>
+            <li><a href="#services">משפט אזרחי</a></li>
+            <li><a href="#services">דיני הגירה</a></li>
+            <li><a href="#services">התאמת מעמד</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>צרו קשר</h4>
+          <ul>
+            <li><a href="tel:036137946">03-6137946</a></li>
+            <li><a href="mailto:mena-law@zahav.net.il">mena-law@zahav.net.il</a></li>
+            <li><a href="#contact">שלח/י פנייה</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>&copy; 2026 מנע ושות׳ עורכי דין. כל הזכויות שמורות.</p>
+        <p>אין באמור באתר זה משום ייעוץ משפטי</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── תפריט מובייל ── */
+var hamburger = document.getElementById('hamburger');
+var mobileNav = document.getElementById('mobileNav');
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+  mobileNav.style.display = '';
+  document.body.style.overflow = '';
+}
+if (hamburger) {
+  hamburger.addEventListener('click', function () {
+    var isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileNav.style.display = 'flex';
+      setTimeout(function(){ mobileNav.classList.add('open'); }, 10);
+      document.body.style.overflow = 'hidden';
+    } else { closeMobileNav(); }
+  });
+}
+
+/* ── חזרה למעלה ── */
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function () {
+  if (scrollTopBtn) scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+if (scrollTopBtn) scrollTopBtn.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ── אפקט גלים על כפתורים ── */
+document.querySelectorAll('.btn').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    var r = document.createElement('span');
+    r.className = 'ripple';
+    var rect = btn.getBoundingClientRect();
+    var size = Math.max(rect.width, rect.height);
+    r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - rect.left - size/2) + 'px;top:' + (e.clientY - rect.top - size/2) + 'px';
+    btn.appendChild(r);
+    setTimeout(function () { r.remove(); }, 600);
+  });
+});
+
+/* ── טופס יצירת קשר ── */
+var form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var valid = true;
+    form.querySelectorAll('[required]').forEach(function (input) {
+      var fg = input.closest('.fg');
+      if (!input.value.trim()) {
+        input.classList.add('error');
+        fg.classList.add('has-error');
+        valid = false;
+      } else {
+        input.classList.remove('error');
+        fg.classList.remove('has-error');
+      }
+    });
+    if (valid) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    }
+  });
+  form.querySelectorAll('input, textarea, select').forEach(function (el) {
+    el.addEventListener('input', function () {
+      el.classList.remove('error');
+      el.closest('.fg').classList.remove('has-error');
+    });
+  });
+}
+
+/* ── חלון שירותים ── */
+function openModal(title, desc, items) {
+  document.getElementById('svcModalTitle').textContent = title;
+  document.getElementById('svcModalDesc').textContent = desc;
+  var list = document.getElementById('svcModalList');
+  list.innerHTML = items.map(function(i){ return '<li>' + i + '</li>'; }).join('');
+  document.getElementById('svcOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('svcOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('svcClose').addEventListener('click', closeModal);
+document.getElementById('svcOverlay').addEventListener('click', function(e){
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+
+<script src="animations.js"></script>
+</body>
+</html>
